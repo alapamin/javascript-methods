@@ -1,6 +1,18 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  let result = [];
+
+  // [1,2,3,4,5]
+
+  // callbackFn = return this[i] * this[i+1];
+  // this line above uses all the parameters given ^^^
+
+  //'this' is referring to the array that the function was called on
+  for(let i = 0; i < this.length; i++){
+    result.push(callbackFn(this[i],i,this));
+  }
+
+  return result;
 };
 
 // FILTER //
@@ -47,3 +59,13 @@ Object.myKeys = function(object) {
 Object.myValues = function(object) {
   // Place your code here.
 };
+
+/*
+
+--TESTING myMap--
+let potato = [1,2,3,4,5];
+let newPotato = potato.myMap(x => x*2);
+console.log(newPotato)
+-----------------
+
+*/
