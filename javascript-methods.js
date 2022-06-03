@@ -65,7 +65,14 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+  for(let i = 0; i < this.length; i++){
+    if(this[i] == searchElement){
+      //if at any point we find the value we're looking for, return true
+      return true;
+    }
+  }
+  //if we don't find that value, return false
+  return false;
 };
 
 // INDEXOF //
@@ -120,7 +127,15 @@ let newPotato = potato.myReduce(x => x);
 console.log(newPotato);
 --------------------
 
+--TESTING myIncludes--
+let potato = [1,2,3,4,5];
+let newPotato = potato.myIncludes(6);
+console.log(newPotato);
+newPotato = potato.myIncludes(5);
+console.log(newPotato);
+----------------------
 */
+
 
 
 
