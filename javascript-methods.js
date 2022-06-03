@@ -77,7 +77,12 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  // Place your code here.
+  for(let i = 0; i < this.length; i++){
+    if(searchElement == this[i]){
+      return i;
+    }
+  }
+  return -1
 };
 
 // LASTINDEXOF //
@@ -134,7 +139,17 @@ console.log(newPotato);
 newPotato = potato.myIncludes(5);
 console.log(newPotato);
 ----------------------
+
+--TESTING myIndexOf--
+let potato = [1,2,3,3,5];
+let newPotato = potato.myIndexOf(3);
+console.log(newPotato);
+newPotato = potato.myIndexOf(6);
+console.log(newPotato);
+---------------------
 */
+
+
 
 
 
