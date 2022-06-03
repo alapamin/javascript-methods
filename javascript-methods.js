@@ -87,7 +87,14 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+  //Reversed order to return the first index of the element found, starting from the end of the array.
+  let answer = -1;
+  for(let i = 0; i < this.length; i++){
+    if(searchElement == this[i]){
+      answer = i;
+    }
+  }
+  return answer;
 };
 
 // KEYS //
@@ -147,7 +154,16 @@ console.log(newPotato);
 newPotato = potato.myIndexOf(6);
 console.log(newPotato);
 ---------------------
+
+--TESTING myLastIndexOf--
+let man = [1,2,3,3,3];
+let newMan = man.myLastIndexOf(3);
+let newnewMan = man.myLastIndexOf(4);
+console.log(newMan);
+console.log(newnewMan);
+-------------------------
 */
+
 
 
 
