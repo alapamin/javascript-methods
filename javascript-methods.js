@@ -104,6 +104,11 @@ let newPotato = potato.mySome(x => x==3);
 console.log(newPotato);
 -------------------
 
+--TESTING myEvery--
+let potato = [1,1,1,1,1];
+let newPotato = potato.myEvery(x => x==1);
+console.log(newPotato);
+-------------------
 */
 
 
