@@ -33,7 +33,15 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  //if callback function is true for any of them -> return true
+  //else return false
+
+  for(let i = 0; i < this.length;i++){
+    if(callbackFn(this[i],i,this)){
+      return true;
+    }
+  }
+  return false;
 };
 
 // EVERY //
@@ -84,7 +92,15 @@ let potato = [1,2,3,4,5];
 let newPotato = potato.myFilter(x => x==2);
 console.log(newPotato);
 --------------------
+
+--TESTING mySome--
+let potato = [1,2,3,4,5];
+let newPotato = potato.mySome(x => x==3);
+console.log(newPotato);
+-------------------
+
 */
+
 
 
 
