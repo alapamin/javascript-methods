@@ -87,7 +87,7 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  //Reversed order to return the first index of the element found, starting from the end of the array.
+  //Set a variable to answer, starting at -1. It will iterate through the array and keep setting answer to the index the searchElement was found at until it iterates through the entire array. Then it will return answer. This effectively returns the final index where searchElement was found.
   let answer = -1;
   for(let i = 0; i < this.length; i++){
     if(searchElement == this[i]){
