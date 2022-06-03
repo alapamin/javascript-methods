@@ -87,7 +87,14 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+  //Set a variable to answer, starting at -1. It will iterate through the array and keep setting answer to the index the searchElement was found at until it iterates through the entire array. Then it will return answer. This effectively returns the final index where searchElement was found.
+  let answer = -1;
+  for(let i = 0; i < this.length; i++){
+    if(searchElement == this[i]){
+      answer = i;
+    }
+  }
+  return answer;
 };
 
 // KEYS //
@@ -147,7 +154,16 @@ console.log(newPotato);
 newPotato = potato.myIndexOf(6);
 console.log(newPotato);
 ---------------------
+
+--TESTING myLastIndexOf--
+let man = [1,2,3,3,3];
+let newMan = man.myLastIndexOf(3);
+let newnewMan = man.myLastIndexOf(4);
+console.log(newMan);
+console.log(newnewMan);
+-------------------------
 */
+
 
 
 
