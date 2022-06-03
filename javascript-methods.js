@@ -17,7 +17,18 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  //keep if true
+  //dont keep if false
+
+  let result = [];
+  for(let i = 0; i < this.length; i++){
+    if(callbackFn(this[i],i,this)){
+      result.push(this[i]);
+    }
+  }
+
+  return result;
+
 };
 
 // SOME //
@@ -68,4 +79,12 @@ let newPotato = potato.myMap(x => x*2);
 console.log(newPotato)
 -----------------
 
+--TESTING myFilter--
+let potato = [1,2,3,4,5];
+let newPotato = potato.myFilter(x => x==2);
+console.log(newPotato);
+--------------------
 */
+
+
+
