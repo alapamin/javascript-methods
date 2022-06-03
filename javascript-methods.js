@@ -46,12 +46,21 @@ Array.prototype.mySome = function(callbackFn) {
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  for(let i = 0; i < this.length;i++){
+    if(!(callbackFn(this[i],i,this))){
+      return false;
+    }
+  }
+  return true;
 };
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+  let answer = 0;
+  for(let i = 0; i < this.length; i++){
+    answer+= callbackFn(this[i],i,this);
+  }
+  return answer;
 };
 
 // INCLUDES //
@@ -99,7 +108,21 @@ let newPotato = potato.mySome(x => x==3);
 console.log(newPotato);
 -------------------
 
+--TESTING myEvery--
+let potato = [1,1,1,1,1];
+let newPotato = potato.myEvery(x => x==1);
+console.log(newPotato);
+-------------------
+
+--TESTING myReduce--
+let potato = [1,2,3,4,5];
+let newPotato = potato.myReduce(x => x);
+console.log(newPotato);
+--------------------
 */
+
+
+
 
 
 
