@@ -108,7 +108,18 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  //an array of all keys using previous method
+  const keysArray = Object.myKeys(object);
+
+  //empty array of values from object - to be filled
+  let valuesArray = [];
+
+  //we want to use for..of because the indices are already enumerated
+  for(const keys of keysArray){
+    valuesArray.push(object[keys]);
+  }
+
+  return valuesArray;
 };
 
 /*
@@ -175,5 +186,15 @@ const object1 = {
 };
 
 console.log(Object.myKeys(object1));
+------------------
+
+--TESTING myValues--
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.myValues(object1));
 ------------------
 */
