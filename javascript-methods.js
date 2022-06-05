@@ -99,7 +99,11 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+  let keys = [];
+  for(const property in object){
+    keys.push(property);
+  }
+  return keys;
 };
 
 // VALUES //
@@ -162,15 +166,14 @@ let newnewMan = man.myLastIndexOf(4);
 console.log(newMan);
 console.log(newnewMan);
 -------------------------
+
+--TESTING myKeys--
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.myKeys(object1));
+------------------
 */
-
-
-
-
-
-
-
-
-
-
-
